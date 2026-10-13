@@ -1,0 +1,23 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "IMDCred",
+    "name": "IMDCred",
+    "symbol": "IMDCRED",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 9000,
+    "initialMarketCapWei": "500000000000000000000"
+  },
+  "notes": "IMDCred (IMDCRED) is the project token of imdcred, a Proof-of-Work NFT game on Robinhood Chain with 4,444 collectible NFTs (mine, mint and stake NFTs, share in project revenue, redeem eligible NFTs against the floor reserve; powered by IMD, with project-token buybacks and burns). Website: https://imdcred.fun. X: https://x.com/Imdcred. The token (src/IMDCred.sol) is a fixed-supply OpenZeppelin v5.4.0 ERC20 with EIP-2612 permit. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 IMDCRED (18 decimals, 1000000000000000000000000000 minor units) once to msg.sender, the ProjectFactory, which distributes the swarm's share, seeds the Uniswap v4 pool against IMD and forwards the remainder. There is no mint function, no minter role, no owner, no pause, no blocklist, no transfer tax, no exemptions and no upgrade path: every transfer moves exactly the amount requested, so all launch flows arrive whole, and the supply can never grow. Any holder may call burn(uint256) on their own balance; this is how the project's buyback-and-burn programme is executed (whoever holds bought-back tokens burns them). There is no burnFrom, so nobody can burn another holder's balance. The runtime contains no DELEGATECALL, CALLCODE or SELFDESTRUCT and links no external libraries. No application contracts are deployed in this launch: the game contracts (mining, minting, staking, revenue share, floor reserve, buyback) are outside this tree and will be launched separately. pool.initialPrice is provenance only; the deployer derives the opening price from economics.initialMarketCapWei and the supply."
+}
